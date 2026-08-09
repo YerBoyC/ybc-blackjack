@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title> YBC-Blackjack</title>
+    </head>
+    <body>
+        <h1>Blackjack</h1>
+        <p id="message-el">Want to play a round?</p>
+
+        <div class="table-area">
+            <div class="table-panel dealer-panel">
+                <h2>Dealer</h2>
+                <p id="dealercards-el">Cards:</p>
+                <p id="dealersum-el">Sum:</p>
+            </div>
+
+            <div class="table-panel player-panel">
+                <h2>Player</h2>
+                <p id="cards-el">Cards:</p>
+                <p id="sum-el">Sum:</p>
+            </div>
+        </div>
+        
+        <div id="bet-controls">
+            <label for="bet-input">Bet:</label>
+            <input id="bet-input" type="number" min="1" value="10">
+            <button id="place-bet" onclick="placeBet()">PLACE BET</button>
+        </div>
+        <div id="game-buttons" style="display:none;">
+            <button id='start-game' onclick="startGame()">START GAME</button>
+            <button id='new-card' onclick="newCard()">NEW CARD</button>
+            <button id='stand' onclick="dealersTurn()">STAND</button>
+        </div>
+        <p id="pot-el">Pot: $0</p>
+        <p id="player-el"></p>
+        <script src="script.js"></script>
+    </body>
+</html>
